@@ -8,8 +8,8 @@ app = Flask(__name__)
 #Task 2 : Dynamic URLS 
     #edit the view function to display 'Welcome to <course_name>' on localhost:5000/course/<course>
 @app.route('/course/<course_name>')
-def courseView():
-    return ""
+def courseView(course_name):
+    return '<h1>Welcome to {}</h1>'.format(course_name)
 
 #Task 3.1 Basic HTML Form
     #Set the method and action of the HTML form, such that form data is sent to /result using POST method
